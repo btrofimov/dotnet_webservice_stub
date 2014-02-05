@@ -15,10 +15,10 @@ It consists basically of four layers: controllers, application, domain and infra
 In this example domain logic is divided from Controller part by special UserService, which in fact is edge of Bounded Context and might be used from anywhere (not just Controller). That is why I made it transactional. So there you can find declarative transactions. All transaction settings are placed outside the code inside xml settings, it allows the developer to keep it uniform in one place for whole application.
 
 Declarative transaction management has the following benefits:
--Uniform control for all transactions.
--Allowing to customize transaction injections with attributes like read-only or propagation.
--Developer is able to add transaction support selectively for methods depending on needs.
--Simplified maintenance and project evolving.
--Simplified reusability of such services with transactional support.
+* Uniform control for all transactions.
+* Allowing to customize transaction injections with attributes like read-only or propagation.
+* Developer is able to add transaction support selectively for methods depending on needs.
+* Simplified maintenance and project evolving.
+* Simplified reusability of such services with transactional support.
 
 No doubts that declarative transaction is not a silver bullet but for many domains endeed it simplifies development.
